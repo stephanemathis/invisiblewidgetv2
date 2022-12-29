@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Invisible Widget</string>
+
+    <string name="app_widget_description">An invisible widget</string>
+
+    <string name="activity_configuration_description">This is a <i>widget only</i> application.\n\nIts unique purpose is to offer a transparent widget that can be placed on your home screen to force an empty new page.\n\nIf you later want to remove the widget, you can change the transparency below to make it visible.</string>
+    <string name="add_widget_fallback">Long press on your home screen to add the widget</string>
+</resources>

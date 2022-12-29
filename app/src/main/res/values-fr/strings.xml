@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Invisible Widget</string>
+
+    <string name="app_widget_description">Un widget invisible</string>
+
+    <string name="activity_configuration_description">Ceci est une <i>applicaton-widget</i>.\n\nSon unique but est de proposer un widget transparent qui peut être placé sur l\'écran d\'accueil pour forcer une nouvelle page vide.\n\nSi plus tard vous voulez retirer le widget, vous pouvez changer la transparence avec le slider pour le rendre visible.</string>
+    <string name="add_widget_fallback">Faites un appui long sur l\'écran d\'accueil pour ajouter le widget.</string>
+
+</resources>
