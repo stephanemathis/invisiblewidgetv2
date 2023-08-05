@@ -76,11 +76,6 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
-
     private void addWidgetToHomeScreen(View view) {
 
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
@@ -96,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             b.putString("ggg", "ggg");
             if (mAppWidgetManager.isRequestPinAppWidgetSupported()) {
                 Intent pinnedWidgetCallbackIntent = new Intent(MainActivity.this, SmallWidget.class);
-                PendingIntent successCallback = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedWidgetCallbackIntent, 0);
+                PendingIntent successCallback = PendingIntent.getBroadcast(MainActivity.this, 0, pinnedWidgetCallbackIntent, PendingIntent.FLAG_IMMUTABLE);
 
                 mAppWidgetManager.requestPinAppWidget(myProvider, b, successCallback);
             }

@@ -24,7 +24,7 @@ public class SmallWidget extends AppWidgetProvider {
 
         if (DataManager.GetMemorizedValue("alpha", context) != 0) {
             Intent iSetting = new Intent(context, MainActivity.class);
-            PendingIntent piSetting = PendingIntent.getActivity(context, 0, iSetting, 0);
+            PendingIntent piSetting = PendingIntent.getActivity(context, 0, iSetting, PendingIntent.FLAG_IMMUTABLE);
             views.setOnClickPendingIntent(R.id.iv_widget_background, piSetting);
         }
         else {

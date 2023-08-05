@@ -44,7 +44,6 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.ivWallpaper.setImageResource(R.drawable.ic_fake_wallpaper);
-        requestPermissionLauncher.launch(Manifest.permission.READ_EXTERNAL_STORAGE);
 
         alphaValue = DataManager.GetMemorizedValue(DataManager.KEY_ALPHA, this.getContext());
         binding.sbAlpha.setProgress(alphaValue);
@@ -67,20 +66,6 @@ public class FirstFragment extends Fragment {
 
         updateAlpha();
     }
-
-    private ActivityResultLauncher<String> requestPermissionLauncher = registerForActivityResult(
-            new ActivityResultContracts.RequestPermission(),
-            new ActivityResultCallback<Boolean>() {
-                @Override
-                public void onActivityResult(Boolean result) {
-                    if (result) {
-                        if (ActivityCompat.checkSelfPermission(FirstFragment.this.getContext(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                            binding.ivWallpaper.setImageDrawable(WallpaperManager.getInstance(FirstFragment.this.getContext()).getDrawable());
-                        }
-                    }
-                }
-            }
-    );
 
     private void updateAlpha() {
         @SuppressLint("ResourceType")
