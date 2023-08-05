@@ -43,8 +43,6 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.ivWallpaper.setImageResource(R.drawable.ic_fake_wallpaper);
-
         alphaValue = DataManager.GetMemorizedValue(DataManager.KEY_ALPHA, this.getContext());
         binding.sbAlpha.setProgress(alphaValue);
 
